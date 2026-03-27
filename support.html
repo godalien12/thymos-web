@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support | Thymos Neuro Resources</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #050505; --accent: #2dd4bf; --blue: #2563eb; --gray: #a1a1aa; --white: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background: var(--bg); color: var(--white); line-height: 1.6; }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 5%; background: var(--bg); border-bottom: 1px solid #222;
+            position: sticky; top: 0; z-index: 100;
+        }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 800; }
+        .brain-icon { width: 35px; height: 35px; background: var(--blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white; }
+        .nav-links { display: flex; gap: 25px; list-style: none; }
+        .nav-links a { color: var(--gray); text-decoration: none; font-size: 14px; font-weight: 600; }
+        .active { color: var(--white) !important; border-bottom: 2px solid var(--accent); }
+
+        /* --- CONTENT --- */
+        .container { max-width: 900px; margin: 80px auto; padding: 0 5%; text-align: center; }
+        h1 { font-size: 42px; font-weight: 800; margin-bottom: 20px; }
+        .lead-text { color: var(--gray); font-size: 18px; margin-bottom: 60px; }
+
+        /* --- SUPPORT CARDS --- */
+        .support-grid { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; margin-bottom: 60px; text-align: left;
+        }
+        .support-card { 
+            background: #0a0a0a; border: 1px solid #222; padding: 35px; 
+            border-radius: 12px; transition: 0.3s;
+        }
+        .support-card h3 { color: var(--accent); font-size: 18px; margin-bottom: 15px; }
+        .support-card p { color: var(--gray); font-size: 14px; }
+
+        /* --- ACTION BOX --- */
+        .donation-box { 
+            background: linear-gradient(145deg, #0a0a0a, #111); 
+            border: 1px solid #333; padding: 50px; border-radius: 20px; 
+            max-width: 600px; margin: 0 auto; 
+        }
+        .donation-box h2 { margin-bottom: 10px; font-size: 28px; }
+        .donation-box p { color: var(--gray); margin-bottom: 30px; font-size: 15px; }
+        
+        .btn-donate { 
+            background: var(--blue); color: white; padding: 18px 45px; 
+            border-radius: 8px; text-decoration: none; font-weight: 800; 
+            display: inline-block; transition: 0.3s; font-size: 16px;
+        }
+        .btn-donate:hover { background: var(--white); color: var(--bg); transform: scale(1.05); }
+
+        footer { padding: 80px 0 40px; text-align: center; color: #222; font-size: 11px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <div class="brain-icon">T</div>
+            THYMOS NEURO
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="intel.html">Research</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="portal.html">Join</a></li>
+            <li><a href="support.html" class="active">Support</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Resource Allocation</h1>
+        <p class="lead-text">Fueling the next generation of theoretical neuroscience and computational research. All contributions go directly toward infrastructure and academic materials.</p>
+
+        <div class="support-grid">
+            <div class="support-card">
+                <h3>Research Materials</h3>
+                <p>Funding for access to peer-reviewed journals, specialized software, and computational hardware for modeling.</p>
+            </div>
+            <div class="support-card">
+                <h3>Phx Infrastructure</h3>
+                <p>Operational costs for the Phoenix hub, including hosting, digital security, and decentralised network management.</p>
+            </div>
+            <div class="support-card">
+                <h3>Global Expansion</h3>
+                <p>Scaling the 390-man operative initiative and supporting regional research leads across the network.</p>
+            </div>
+        </div>
+
+        <div class="donation-box">
+            <h2>Back the Initiative</h2>
+            <p>Support the Directorate’s mission to establish a decentralized global research network.</p>
+            <a href="#" class="btn-donate">Contribute to Thymos</a>
+            <p style="font-size: 10px; color: #333; margin-top: 15px; text-transform: uppercase; letter-spacing: 1px;">Powered by Secure Transaction Services</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 THYMOS NEURO | Resource Integrity. :P
+    </footer>
+
+</body>
+</html>
