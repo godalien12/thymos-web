@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THYMOS NEURO | Global HQ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #050505; --accent: #2dd4bf; --blue: #2563eb; --gray: #a1a1aa; --white: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background: var(--bg); color: var(--white); overflow-x: hidden; }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 25px 5%; background: var(--bg); border-bottom: 1px solid #1a1a1a;
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 20px; }
+        .brain-glow {
+            width: 35px; height: 35px; background: var(--blue); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-size: 16px; 
+            box-shadow: 0 0 15px rgba(37, 99, 235, 0.6);
+            animation: pulse 2s infinite ease-in-out;
+        }
+        @keyframes pulse { 0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.6; } }
+
+        /* --- HERO SECTION --- */
+        .hero { height: 90vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 5%; }
+        .hero h1 { font-size: clamp(50px, 10vw, 90px); font-weight: 800; line-height: 0.85; letter-spacing: -3px; margin-bottom: 25px; }
+        .hero p { color: var(--gray); font-size: 20px; max-width: 650px; margin-bottom: 40px; }
+
+        /* --- THE HUB LINKS (BENTO STYLE) --- */
+        .hub-grid { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 20px; width: 100%; max-width: 1200px; padding-bottom: 100px;
+        }
+        .hub-card { 
+            background: #0a0a0a; border: 1px solid #222; padding: 40px; border-radius: 20px; 
+            text-decoration: none; color: white; transition: 0.4s; position: relative; overflow: hidden;
+        }
+        .hub-card:hover { border-color: var(--accent); transform: translateY(-10px); background: #0f0f0f; }
+        .hub-card h3 { font-size: 22px; margin-bottom: 10px; color: var(--accent); }
+        .hub-card p { color: var(--gray); font-size: 14px; }
+        .hub-card .arrow { position: absolute; bottom: 30px; right: 30px; font-size: 20px; opacity: 0; transition: 0.3s; }
+        .hub-card:hover .arrow { opacity: 1; right: 20px; }
+
+        footer { padding: 40px; text-align: center; color: #222; font-size: 11px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <div class="brain-glow">T</div>
+            THYMOS NEURO
+        </div>
+        <div style="font-size: 12px; color: var(--gray); font-weight: 800; letter-spacing: 2px;">PHX_NODE_01</div>
+    </nav>
+
+    <main class="hero">
+        <h1>Devouring <br><span style="color: var(--blue);">The Light.</span></h1>
+        <p>A specialized hub for theoretical neuroscience and computational physics research. Phase 01 initiation: April 2nd.</p>
+
+        <div class="hub-grid">
+            <a href="intel.html" class="hub-card">
+                <h3>Research</h3>
+                <p>Access theoretical papers and cosmological models.</p>
+                <div class="arrow">→</div>
+            </a>
+
+            <a href="team.html" class="hub-card">
+                <h3>Directorate</h3>
+                <p>Review the 6-division organizational hierarchy.</p>
+                <div class="arrow">→</div>
+            </a>
+
+            <a href="portal.html" class="hub-card" style="border-color: var(--blue);">
+                <h3 style="color: var(--blue);">Portal</h3>
+                <p>Initiate the operative intake diagnostic.</p>
+                <div class="arrow">→</div>
+            </a>
+
+            <a href="support.html" class="hub-card">
+                <h3>Support</h3>
+                <p>Resources for infrastructure and global expansion.</p>
+                <div class="arrow">→</div>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 THYMOS NEURO | Clinical Standards Observed. :P
+    </footer>
+
+</body>
+</html>
