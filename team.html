@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directorate | Thymos Neuro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #050505; --accent: #2dd4bf; --blue: #2563eb; --gray: #a1a1aa; --white: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background: var(--bg); color: var(--white); line-height: 1.6; }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 5%; background: var(--bg); border-bottom: 1px solid #222;
+            position: sticky; top: 0; z-index: 100;
+        }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 800; }
+        .brain-icon { width: 35px; height: 35px; background: var(--blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white; }
+        .nav-links { display: flex; gap: 25px; list-style: none; }
+        .nav-links a { color: var(--gray); text-decoration: none; font-size: 14px; font-weight: 600; }
+        .active { color: var(--white) !important; }
+
+        /* --- CONTENT --- */
+        .container { max-width: 1000px; margin: 80px auto; padding: 0 5%; }
+        h1 { font-size: 42px; margin-bottom: 15px; font-weight: 800; }
+        .lead-text { color: var(--gray); font-size: 18px; max-width: 700px; margin-bottom: 60px; }
+
+        /* --- DIVISION GRID --- */
+        .division-grid { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px; 
+        }
+        .div-card { 
+            background: #0a0a0a; border: 1px solid #222; padding: 30px; 
+            border-radius: 12px; transition: 0.3s;
+        }
+        .div-card:hover { border-color: var(--blue); transform: translateY(-5px); }
+        .div-card h3 { font-size: 20px; color: var(--accent); margin-bottom: 15px; }
+        .div-card p { color: var(--gray); font-size: 14px; }
+        .div-number { font-size: 10px; color: #444; font-weight: 800; margin-bottom: 5px; display: block; }
+
+        footer { padding: 80px 0 40px; text-align: center; color: #333; font-size: 12px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <div class="brain-icon">T</div>
+            THYMOS NEURO
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="intel.html">Research</a></li>
+            <li><a href="team.html" class="active">Our Team</a></li>
+            <li><a href="portal.html">Join</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>The Directorate</h1>
+        <p class="lead-text">Thymos Neuro operates through a structured 6-division hierarchy to manage the global expansion and research output.</p>
+
+        <div class="division-grid">
+            <div class="div-card">
+                <span class="div-number">DIV_01</span>
+                <h3>Executive Team</h3>
+                <p>Strategic oversight and high-level decision making for the Phx hub and global expansion.</p>
+            </div>
+            <div class="div-card">
+                <span class="div-number">DIV_02</span>
+                <h3>Project & Research</h3>
+                <p>Development of theoretical physics models and neuro-computational infrastructure.</p>
+            </div>
+            <div class="div-card">
+                <span class="div-number">DIV_03</span>
+                <h3>Technology & Systems</h3>
+                <p>Managing the digital architecture, servers, and internal operative tools.</p>
+            </div>
+            <div class="div-card">
+                <span class="div-number">DIV_04</span>
+                <h3>Financial Team</h3>
+                <p>Oversight of sponsorships, donations, and resource allocation for research materials.</p>
+            </div>
+            <div class="div-card">
+                <span class="div-number">DIV_05</span>
+                <h3>Outreach & Partnership</h3>
+                <p>Building connections with other research initiatives and educational institutions.</p>
+            </div>
+            <div class="div-card">
+                <span class="div-number">DIV_06</span>
+                <h3>HR & Operations</h3>
+                <p>Managing the intake of new operatives and internal organizational logistics.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 THYMOS NEURO | Phase 01: Initiation. :P
+    </footer>
+
+</body>
+</html>
