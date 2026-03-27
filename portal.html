@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal | Thymos Neuro Intake</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #050505; --accent: #2dd4bf; --blue: #2563eb; --gray: #a1a1aa; --white: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background: var(--bg); color: var(--white); line-height: 1.6; }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 5%; background: var(--bg); border-bottom: 1px solid #222;
+            position: sticky; top: 0; z-index: 100;
+        }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 800; }
+        .brain-icon { width: 35px; height: 35px; background: var(--blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white; box-shadow: 0 0 10px rgba(37, 99, 235, 0.4); }
+        .nav-links { display: flex; gap: 25px; list-style: none; }
+        .nav-links a { color: var(--gray); text-decoration: none; font-size: 14px; font-weight: 600; }
+        .active { color: var(--white) !important; border-bottom: 2px solid var(--accent); }
+
+        /* --- LAYOUT --- */
+        .portal-container { max-width: 800px; margin: 80px auto; padding: 0 5%; }
+        header { text-align: center; margin-bottom: 60px; }
+        header h1 { font-size: 42px; font-weight: 800; margin-bottom: 15px; }
+        header p { color: var(--gray); font-size: 18px; }
+
+        /* --- THE DIAGNOSTIC FORM --- */
+        .form-box { background: #0a0a0a; border: 1px solid #222; padding: 50px; border-radius: 20px; }
+        
+        .form-group { margin-bottom: 25px; }
+        label { display: block; font-size: 12px; color: var(--gray); font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+        
+        input, select, textarea { 
+            width: 100%; padding: 15px; background: #111; border: 1px solid #333; 
+            color: white; border-radius: 8px; font-size: 15px; transition: 0.3s;
+        }
+        input:focus, select:focus, textarea:focus { border-color: var(--blue); outline: none; background: #151515; }
+
+        /* MULTI-SELECT STYLE FOR DIVISIONS */
+        .division-selector { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+        .div-option { 
+            padding: 15px; border: 1px solid #333; border-radius: 8px; cursor: pointer; 
+            text-align: center; font-size: 13px; font-weight: 600; color: var(--gray); transition: 0.2s;
+        }
+        .div-option:hover { border-color: var(--accent); color: var(--white); }
+
+        .submit-btn { 
+            width: 100%; padding: 20px; background: var(--blue); color: white; 
+            border: none; font-weight: 800; border-radius: 8px; cursor: pointer; 
+            font-size: 16px; margin-top: 20px; transition: 0.3s;
+        }
+        .submit-btn:hover { background: var(--white); color: var(--bg); transform: translateY(-2px); }
+
+        footer { padding: 60px; text-align: center; color: #222; font-size: 12px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <div class="brain-icon">T</div>
+            THYMOS NEURO
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="intel.html">Research</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="portal.html" class="active">Portal</a></li>
+            <li><a href="support.html">Support</a></li>
+        </ul>
+    </nav>
+
+    <div class="portal-container">
+        <header>
+            <h1>Initiate Diagnostic</h1>
+            <p>Onboarding for Phase 01: April 2nd Cycle.</p>
+        </header>
+
+        <div class="form-box">
+            <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
+                
+                <div class="form-group">
+                    <label>Identity (Full Name)</label>
+                    <input type="text" name="name" placeholder="John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Operative Tag (Discord / Email)</label>
+                    <input type="text" name="contact" placeholder="@username" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Division Specialty</label>
+                    <select name="division" required>
+                        <option value="" disabled selected>Select Primary Division</option>
+                        <option value="Executive">Executive Team (Logistics/Admin)</option>
+                        <option value="Research">Project & Research (Physics/Neuro)</option>
+                        <option value="Tech">Technology & Systems (IT/Coding)</option>
+                        <option value="Finance">Financial Team (Grant Writing/Sponsorship)</option>
+                        <option value="Outreach">Outreach & Partnership (Comms)</option>
+                        <option value="HR">HR & Operations (Recruitment)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Evidence of Utility</label>
+                    <textarea name="utility" rows="6" placeholder="List your technical skills, relevant research, projects, or link to a portfolio. We prioritize utility over resumes." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Why Thymos Neuro?</label>
+                    <textarea name="motivation" rows="3" placeholder="Briefly state your alignment with the 390-man expansion." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Dossier</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 THYMOS NEURO | Professional Recruitment Standards. :P
+    </footer>
+
+</body>
+</html>
