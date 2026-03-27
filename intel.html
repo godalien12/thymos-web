@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | Thymos Neuro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #050505; --accent: #2dd4bf; --blue: #2563eb; --gray: #a1a1aa; --white: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background: var(--bg); color: var(--white); line-height: 1.6; }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 5%; background: var(--bg); border-bottom: 1px solid #222;
+            position: sticky; top: 0; z-index: 100;
+        }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 800; }
+        
+        /* THE GLOWING BRAIN-T */
+        .brain-glow {
+            width: 35px; height: 35px; background: var(--blue); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-size: 16px; color: white;
+            box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
+            animation: brainPulse 2.5s infinite ease-in-out;
+        }
+        @keyframes brainPulse {
+            0% { box-shadow: 0 0 5px rgba(37, 99, 235, 0.3); }
+            50% { box-shadow: 0 0 15px rgba(37, 99, 235, 0.8); }
+            100% { box-shadow: 0 0 5px rgba(37, 99, 235, 0.3); }
+        }
+
+        .nav-links { display: flex; gap: 25px; list-style: none; }
+        .nav-links a { color: var(--gray); text-decoration: none; font-size: 14px; font-weight: 600; }
+        .active { color: var(--white) !important; }
+
+        /* --- CONTENT --- */
+        .container { max-width: 900px; margin: 60px auto; padding: 0 5%; }
+        h1 { font-size: 36px; margin-bottom: 10px; font-weight: 800; }
+        .sub-head { color: var(--gray); margin-bottom: 40px; font-size: 18px; }
+
+        /* --- PAPER LIST --- */
+        .paper-entry { 
+            border-bottom: 1px solid #222; padding: 30px 0; 
+            display: flex; justify-content: space-between; align-items: flex-start; gap: 20px;
+        }
+        .paper-info h2 { font-size: 20px; margin-bottom: 8px; color: var(--white); }
+        .paper-info p { color: var(--gray); font-size: 15px; max-width: 600px; }
+        .paper-date { font-size: 12px; color: var(--accent); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; display: block; }
+
+        .download-link { 
+            background: #111; color: var(--white); padding: 10px 20px; 
+            border-radius: 5px; text-decoration: none; font-size: 13px; font-weight: 700;
+            border: 1px solid #333; white-space: nowrap; transition: 0.2s;
+        }
+        .download-link:hover { background: var(--white); color: var(--bg); }
+
+        footer { padding: 60px; text-align: center; color: #444; font-size: 12px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <div class="brain-glow">T</div>
+            THYMOS NEURO
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="intel.html" class="active">Research</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="portal.html">Join</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Publications & Models</h1>
+        <p class="sub-head">A collection of theoretical papers and computational models developed by the Phoenix hub.</p>
+
+        <div class="paper-entry">
+            <div class="paper-info">
+                <span class="paper-date">March 2026</span>
+                <h2>Cyclic Cosmological Coupling & Pixelated Space-Time</h2>
+                <p>A computational model exploring the quantum pixelation of space-time and its role in gravitational recycling. Focuses on the non-singularity expansion of the cosmos.</p>
+            </div>
+            <a href="#" class="download-link">View Paper</a>
+        </div>
+
+        <div class="paper-entry">
+            <div class="paper-info">
+                <span class="paper-date">Internal Technical Report</span>
+                <h2>Neural Infrastructure Phase 01</h2>
+                <p>Technical specifications for the decentralised data processing network supporting the 390-man operative initiative.</p>
+            </div>
+            <a href="#" class="download-link">View Report</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 THYMOS NEURO | Phoenix Division. :P
+    </footer>
+
+</body>
+</html>
